@@ -24,7 +24,6 @@
 #include <myjailbreak>
 #include <myjbwarden>
 #include <warden>
-#include <franug_deadgames>
 
 #define MINUTES 30
 
@@ -187,8 +186,6 @@ public Action:PlayerSpawn(Handle:event, const String:name[], bool:dontBroadcast)
 	if (!soccer)return;
 	
 	int client = GetClientOfUserId(GetEventInt(event, "userid"));
-	
-	if (DeadGames_IsOnGame(client))return;
 	
 	
 	SetEntProp(client, Prop_Data, "m_takedamage", 1, 1);
